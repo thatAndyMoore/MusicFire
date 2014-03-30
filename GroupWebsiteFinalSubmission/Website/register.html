@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<html lang="en">
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css"/>
+<title>MusicFire - New Account</title>
+<body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){
+    $("a[rel^='prettyPhoto']").prettyPhoto();
+  });
+</script>
+<header>
+<a href="index.php"><img src="images/logo.png"/></a>
+</header>
+<content>
+Fill in the form to the left to create your new account!</br>
+Feilds marked with "<imp>*</imp>" are required.</br>
+<p/>
+<p/>
+<form action="register.php" method="post" autocomplete="on">
+<table>
+	<tr><td style="font-weight:bold;">Personal Information</td></tr>
+	<tr><td><imp>*</imp>Username: </td><td><input type="text" name="username" id="username" size="60" maxlength="60" autofocus required/></td></tr>
+	<tr><td><imp>*</imp>Password: </td><td><input type="password" name="password" id="password" size="60" maxlength="16" required/></td></tr>
+	<tr><td><imp>*</imp>Confirm Password: </td><td><input type="password" name="passwordconf" id="passwordconf" size="60" maxlength="16" required/></td></tr>
+	<tr><td></br></td></tr>
+	<tr><td><imp>*</imp>First Name: </td><td><input type="text" name="first" id="first" size="60" maxlength="60" required/></td></tr>
+	<tr><td>Middle Name: </td><td><input type="text" name="middle" id="middle" size="60" maxlength="60"/></td></tr>
+	<tr><td><imp>*</imp>Last Name: </td><td><input type="text" name="Last" id="last" size="60" maxlength="60" required/></td></tr>
+	<tr><td><imp>*</imp>EMail Address: </td><td><input type="text" name="email" id="email" size="60" maxlength="60" required/></td></tr>
+	<tr><td><imp>*</imp>Confirm Email: </td><td><input type="text" name="emailconf" id="emailconf" size="60" maxlength="60" required/></td></tr>
+	<tr><td></br></td></tr>
+	<tr><td style="font-weight:bold;">Billing Information</td></tr>
+	<tr><td><imp>*</imp>Address 1: </td><td><input type="text" name="add1" id="add1" size="60" maxlength="100" required/></td></tr>
+	<tr><td>Address 2: </td><td><input type="text" name="add2" id="add2" size="60" maxlength="100"/></td></tr>
+	<tr><td><imp>*</imp>City: </td><td><input type="text" name="city" id="city" size="60" maxlength="60" required/></td></tr>
+	<tr><td><imp>*</imp>State: </td><td>
+		<select name="state" required>
+			<option value="">--</option>
+			<option value="AK">AK</option>
+			<option value="AL">AL</option>
+			<option value="AR">AR</option>
+			<option value="AZ">AZ</option>
+			<option value="CA">CA</option>
+			<option value="CO">CO</option>
+			<option value="CT">CT</option>
+			<option value="DE">DE</option>
+			<option value="FL">FL</option>
+			<option value="GA">GA</option>
+			<option value="HI">HI</option>
+			<option value="IA">IA</option>
+			<option value="ID">ID</option>
+			<option value="IL">IL</option>
+			<option value="IN">IN</option>
+			<option value="KS">KS</option>
+			<option value="KY">KY</option>
+			<option value="LA">LA</option>
+			<option value="MA">MA</option>
+			<option value="MD">MD</option>
+			<option value="ME">ME</option>
+			<option value="MH">MH</option>
+			<option value="MI">MI</option>
+			<option value="MN">MN</option>
+			<option value="MS">MO</option>
+			<option value="MT">MT</option>
+			<option value="NC">NC</option>
+			<option value="ND">ND</option>
+			<option value="NE">NE</option>
+			<option value="NH">NH</option>
+			<option value="NJ">NJ</option>
+			<option value="NM">NM</option>
+			<option value="NV">NV</option>
+			<option value="NY">NY</option>
+			<option value="OH">OH</option>
+			<option value="OK">OK</option>
+			<option value="OR">OR</option>
+			<option value="PA">PA</option>
+			<option value="RI">RI</option>
+			<option value="SC">SC</option>
+			<option value="SD">SD</option>
+			<option value="TN">TN</option>
+			<option value="TX">TX</option>
+			<option value="UT">UT</option>
+			<option value="VT">VT</option>
+			<option value="VA">VA</option>
+			<option value="WA">WA</option>
+			<option value="WI">WI</option>
+			<option value="WV">WV</option>
+			<option value="WY">WY</option>
+		</select></td></tr>
+	<tr><td><imp>*</imp>Zip: </td><td><input type="text" name="zip" id="zip" size="60" maxlength="10" required/></td></tr>
+	<tr><td></br></td></tr>
+	<tr><td><imp>*</imp>Name on Card: </td><td><input type="text" name="ccname" id="ccname" size="60" maxlength="100" required/></td></tr>
+	<tr><td><imp>*</imp>Credit Card Number: </td><td><input type="text" name="ccnum1" id="ccnum1" size="4" maxlength="4" onkeyup="moveOnMax(this, 'ccnum2')" required/><input type="text" name="ccnum2" id="ccnum2" size="4" maxlength="4" onkeyup="moveOnMax(this,'ccnum3')" required/><input type="text" name="ccnum3" id="ccnum3" size="4" maxlength="4" onkeyup="moveOnMax(this,'ccnum4')" required/><input type="text" name="ccnum4" id="ccnum4" size="4" maxlength="4" required/></td></tr>
+	<tr><td><imp>*</imp>Expiration Date: </td><td>
+		<select name="month" required>
+			<option value="--">--</option>
+			<option value="01">01</option>
+			<option value="02">02</option>
+			<option value="03">03</option>
+			<option value="04">04</option>
+			<option value="05">05</option>
+			<option value="06">06</option>
+			<option value="07">07</option>
+			<option value="08">08</option>
+			<option value="09">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+		</select>
+		<select name="year" required>
+			<option value="----">----</option>
+			<option value="2013">2013</option>
+			<option value="2014">2014</option>
+			<option value="2015">2015</option>
+			<option value="2016">2016</option>
+			<option value="2017">2017</option>
+			<option value="2018">2018</option>
+			<option value="2019">2019</option>
+			<option value="2020">2020</option>
+			<option value="2021">2021</option>
+			<option value="2022">2022</option>
+		</select></td></tr>
+	<tr><td><imp>*</imp>CID: </td><td><input type="password" name="cid" id="cid" size="4" maxlength="4" required/>&nbsp;<a href="cid.html?iframe=true&amp;width=300px&amp;height=70%"rel="prettyPhoto[iframes]" style="font-size:7pt;">What's This?</a></td></tr>
+</table>
+</br>
+<input type="submit" value="Send"/><input type="reset" value="Reset Form"/></form>
+</content>
+</body>
+<script type = "text/javascript">
+function moveOnMax(field,nextFieldID)
+{
+	if(field.value.length >= field.maxLength)
+	{
+		document.getElementById(nextFieldID).focus();
+	}
+}
+</script>
+</html>
